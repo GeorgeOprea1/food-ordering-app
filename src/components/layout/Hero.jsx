@@ -3,8 +3,8 @@ import Right from "../icons/Right";
 
 const Hero = () => {
   return (
-    <section className="hero">
-      <div className="py-12">
+    <section className="w-full flex flex-col sm:flex-row ">
+      <div className="py-12  w-full sm:w-[50%]  text-center sm:text-start">
         <h1 className="text-4xl font-semibold ">
           Everything <br />
           is better <br />
@@ -15,7 +15,7 @@ const Hero = () => {
           Pizza is the missing piece that makes every day complete, a simple yet
           delicious joy in life
         </p>
-        <div className="flex gap-4 text-sm">
+        <div className="flex flex-col items-center sm:items-start sm:flex-row  w-full gap-4 text-sm ">
           <button className="bg-primary uppercase text-white px-8 py-2 rounded-full flex items-center gap-2 ">
             Order Now <Right />
           </button>
@@ -25,12 +25,12 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div className=" relative">
+      <div className="sm:w-[50%] w-full  flex items-center justify-center">
         <Image
           src={"/pizza.png"}
-          layout={"fill"}
-          objectFit={"contain"}
           alt={"pizza"}
+          width={300}
+          height={300}
         ></Image>
       </div>
     </section>
