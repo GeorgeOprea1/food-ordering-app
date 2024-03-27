@@ -3,7 +3,7 @@ import Right from "../icons/Right";
 
 const Hero = () => {
   return (
-    <section className="w-full flex flex-col sm:flex-row ">
+    <section className="w-full flex flex-col sm:flex-row mt-4">
       <div className="py-12  w-full sm:w-[50%]  text-center sm:text-start">
         <h1 className="text-4xl font-semibold ">
           Everything <br />
