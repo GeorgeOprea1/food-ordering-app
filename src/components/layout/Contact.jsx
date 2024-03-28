@@ -1,5 +1,5 @@
 import React from "react";
-import SectionHeaders from "@/components/layout/SectionHeaders";
+import SectionHeaders from "./../layout/SectionHeaders";
 
 const Contact = () => {
   return (
