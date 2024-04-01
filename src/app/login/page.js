@@ -12,7 +12,7 @@ const LoginPage = () => {
     e.preventDefault();
     setLoginInProgress(true);
 
-    await signIn("credentials", { email, password });
+    await signIn("credentials", { email, password, callbackUrl: "/" });
 
     setLoginInProgress(false);
   }
@@ -43,7 +43,11 @@ const LoginPage = () => {
         <div className="my-4 text-center text-gray-500">
           or log in with provider
         </div>
-        <button className="flex items-center gap-4 justify-center">
+        <button
+          type="button"
+          onClick={() => signIn("google", { callbackUrl: "/" })}
+          className="flex items-center gap-4 justify-center"
+        >
           <Image
             src={"/google.svg"}
             width={20}
