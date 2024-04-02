@@ -7,7 +7,7 @@ import GoogleProvider from "next-auth/providers/google";
 
 mongoose.connect(process.env.MONGO_URL);
 
-const handler = NextAuth({
+export const authOptions = {
   secret: process.env.SECRET,
 
   providers: [
@@ -41,6 +41,8 @@ const handler = NextAuth({
       },
     }),
   ],
-});
+};
+
+const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST };
