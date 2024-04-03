@@ -47,6 +47,7 @@ const HomeMenu = () => {
             image={pizza.image}
             title={pizza.title}
             description={pizza.description}
+            price={pizza.price}
           />
         ))}
       </div>
