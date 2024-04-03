@@ -22,10 +22,18 @@ const Header = () => {
         >
           St Pizza
         </Link>
-        <Link href={"/"}>Home</Link>
-        <Link href={"/menu"}>Menu</Link>
-        <Link href={""}>About</Link>
-        <Link href={""}>Contact</Link>
+        <Link href={"/"} className="hover:text-primary">
+          Home
+        </Link>
+        <Link href={"/menu"} className="hover:text-primary">
+          Menu
+        </Link>
+        <Link href={""} className="hover:text-primary">
+          About
+        </Link>
+        <Link href={""} className="hover:text-primary">
+          Contact
+        </Link>
       </nav>
       <nav className="flex items-center gap-4 text-gray-500 font-semibold">
         {status === "authenticated" && (
@@ -43,7 +51,9 @@ const Header = () => {
         )}
         {status !== "authenticated" && (
           <>
-            <Link href={"/login"}>Login</Link>
+            <Link href={"/login"} className="hover:text-primary">
+              Login
+            </Link>
             <Link
               href={"/register"}
               className="bg-primary text-white px-2 sm:px-8 py-1 rounded-full"

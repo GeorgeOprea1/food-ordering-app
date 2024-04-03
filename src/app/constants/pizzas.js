@@ -11,7 +11,6 @@ import beef from "./../../../public/pizzas/beef.avif";
 import bbq from "./../../../public/pizzas/bbq.avif";
 import hawaiian from "./../../../public/pizzas/hawaiian.avif";
 
-console.log({ beef });
 export const pizzas = [
   {
     id: "1",
