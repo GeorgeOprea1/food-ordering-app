@@ -52,7 +52,7 @@ const Header = () => {
                 Menu
               </Link>
               <Link
-                href={""}
+                href={"/about"}
                 className="hover:text-primary border-2 border-gray-300 p-4 w-[50%] text-center rounded-full"
                 onClick={toggleMenu}
               >
@@ -114,7 +114,7 @@ const Header = () => {
           <Link href={"/menu"} className="hover:text-primary">
             Menu
           </Link>
-          <Link href={""} className="hover:text-primary">
+          <Link href={"/about"} className="hover:text-primary">
             About
           </Link>
           <Link href={""} className="hover:text-primary">
