@@ -23,7 +23,7 @@ const Header = () => {
           St Pizza
         </Link>
         <Link href={"/"}>Home</Link>
-        <Link href={""}>Menu</Link>
+        <Link href={"/menu"}>Menu</Link>
         <Link href={""}>About</Link>
         <Link href={""}>Contact</Link>
       </nav>

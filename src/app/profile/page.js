@@ -7,7 +7,7 @@ import { redirect } from "next/navigation";
 const ProfilePage = () => {
   const session = useSession();
   const { status } = session;
-  const userImage = session.data.user.image;
+  const userImage = session?.data?.user?.image; // Guarded access
   const [userName, setUserName] = useState("");
   const [saved, setSaved] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
@@ -67,7 +67,12 @@ const ProfilePage = () => {
                 alt={"avatar"}
                 className="rounded-full"
               ></Image>
-              <button type="button"> Change avatar</button>
+              <label>
+                <input type="file" className="hidden" />
+                <span className="cursor-pointer border-gray-300 p-2 border text-center rounded-xl">
+                  Edit
+                </span>
+              </label>
             </div>
           </div>
           <form className="flex-1" onSubmit={handleProfileInfoUpdate}>
@@ -80,7 +85,7 @@ const ProfilePage = () => {
             <input
               type="email"
               disabled={true}
-              value={session.data.user.email}
+              value={session?.data?.user?.email} // Guarded access
             ></input>
             <button type="submit">Save</button>
           </form>

@@ -19,13 +19,13 @@ const Hero = () => {
           <button className=" justify-center bg-primary uppercase text-white px-8 py-2 rounded-full flex items-center gap-2 ">
             Order Now <Right />
           </button>
-          <button className="flex  items-center gap-2 py-2 text-gray-600 font-semibold border-0">
+          <button className="flex  items-center justify-center gap-2 py-2 text-gray-600 font-semibold ">
             Learn more
             <Right />
           </button>
         </div>
       </div>
-      <div className="sm:w-[50%] w-full  flex items-center justify-center">
+      <div className="sm:w-[50%] w-full  flex items-center">
         <Image
           src={"/pizza.png"}
           alt={"pizza"}

@@ -27,12 +27,36 @@ const HomeMenu = () => {
         </div>
       </div>
       <div className="grid sm:grid-cols-3 gap-4">
-        <MenuItem />
-        <MenuItem />
-        <MenuItem />
-        <MenuItem />
-        <MenuItem />
-        <MenuItem />
+        <MenuItem
+          image={"./pizza.png"}
+          title={"Pepperoni"}
+          description={" asdf asdfas d adsfadasfasdf asd f"}
+        />
+        <MenuItem
+          image={"./pizza.png"}
+          title={"Pepperoni"}
+          description={" asdf asdfas d adsfadasfasdf asd f"}
+        />{" "}
+        <MenuItem
+          image={"./pizza.png"}
+          title={"Pepperoni"}
+          description={" asdf asdfas d adsfadasfasdf asd f"}
+        />{" "}
+        <MenuItem
+          image={"./pizza.png"}
+          title={"Pepperoni"}
+          description={" asdf asdfas d adsfadasfasdf asd f"}
+        />{" "}
+        <MenuItem
+          image={"./pizza.png"}
+          title={"Pepperoni"}
+          description={" asdf asdfas d adsfadasfasdf asd f"}
+        />{" "}
+        <MenuItem
+          image={"./pizza.png"}
+          title={"Pepperoni"}
+          description={" asdf asdfas d adsfadasfasdf asd f"}
+        />
       </div>
     </section>
   );
