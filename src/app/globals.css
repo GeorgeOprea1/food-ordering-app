@@ -29,3 +29,8 @@ button[type="submit"]:disabled,
 .submit:disabled {
   @apply cursor-not-allowed bg-red-400;
 }
+.carousel-container {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+}

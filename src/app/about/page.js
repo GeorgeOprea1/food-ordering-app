@@ -1,6 +1,32 @@
+"use client";
 import work from "./../../../public/work.avif";
+import { MdOutlineStar } from "react-icons/md";
+import { IoStarHalfOutline } from "react-icons/io5";
+import ReviewItem from "./../../components/review/ReviewItem";
+import { FaChevronLeft } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa6";
+import { useRef } from "react";
 
 const AboutPage = () => {
+  const carouselRef = useRef(null);
+  const scrollLeft = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: -100,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: 100,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section className="mt-8">
       <div className=" flex flex-col gap-4 text-center">
@@ -39,6 +65,38 @@ const AboutPage = () => {
           Nation’s Restaurant News among its Top 200 Restaurant Chains and
           Franchise Times Top 400.
         </p>
+      </div>
+      <div>
+        <h1 className="text-center text-primary text-2xl font-medium  mt-10 mb-4 ">
+          WHAT OUR CUSTOMERS SAY
+        </h1>
+        <div className="flex items-center justify-center mb-4">
+          <MdOutlineStar className="w-[25px] h-[25px]" />
+          <MdOutlineStar className="w-[25px] h-[25px]" />
+          <MdOutlineStar className="w-[25px] h-[25px]" />
+          <MdOutlineStar className="w-[25px] h-[25px]" />
+          <IoStarHalfOutline className="w-[25px] h-[25px]" />
+        </div>
+        <div className="flex items-center justify-center">
+          4.50 (97824 reviews)
+        </div>
+        <div className=" flex">
+          <button className="border-0 flex items-center justify-center">
+            <FaChevronLeft className="w-[30px] h-[30px]" onClick={scrollLeft} />
+          </button>
+          <div className="carousel-container my-10 py-8" ref={carouselRef}>
+            <ReviewItem />
+            <ReviewItem />
+            <ReviewItem />
+            <ReviewItem />
+            <ReviewItem />
+            <ReviewItem />
+            <ReviewItem />
+          </div>
+          <button className="border-0 flex  items-center justify-center">
+            <FaAngleRight className="w-[30px] h-[30px]" onClick={scrollRight} />
+          </button>
+        </div>
       </div>
       <div className="w-full flex flex-col border-2 sm:flex-row gap-4 bg-primary  rounded-2xl mt-8 p-8">
         <div className="sm:w-[50%] ">
