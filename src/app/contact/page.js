@@ -68,6 +68,172 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
+      <div className=" py-8 px-4 bg-primary text-white rounded-xl">
+        <h2 className="text-3xl font-bold text-center mb-6">
+          NEVER MISS OUT ON AMAZING DEALS AT CICIS!
+        </h2>
+        <p className="text-lg text-center mb-6">
+          SIGN UP FOR NEW PIZZABILITIES
+        </p>
+        <form className="space-y-4">
+          <div className="flex flex-wrap -mx-2">
+            <div className="w-full md:w-1/2 px-2 mb-4">
+              <label
+                htmlFor="firstName"
+                className="block text-sm font-medium text-white"
+              >
+                First Name *
+              </label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                required
+              />
+            </div>
+            <div className="w-full md:w-1/2 px-2 mb-4">
+              <label
+                htmlFor="lastName"
+                className="block text-sm font-medium text-white"
+              >
+                Last Name *
+              </label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                required
+              />
+            </div>
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-white"
+            >
+              Email *
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="phone"
+              className="block text-sm font-medium text-white"
+            >
+              Phone Number *
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[+][0-9]{11}"
+              title="Include country code, e.g. +12345678901"
+              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              required
+            />
+          </div>
+          <div className="flex flex-col -mx-2 mb-4">
+            <div className="w-full  px-2">
+              <label
+                htmlFor="birthday"
+                className="block text-sm font-medium text-white"
+              >
+                Birthday (MM/DD)
+              </label>
+              <input
+                type="text"
+                id="birthday"
+                name="birthday"
+                placeholder="MM/DD"
+                className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+            <div className="w-full flex flex-col   px-2">
+              <label
+                htmlFor="homeStore"
+                className="block text-sm font-medium text-white"
+              >
+                Home Store *
+              </label>
+              <select
+                id="homeStore"
+                name="homeStore"
+                className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                required
+              >
+                <option value="">Select Home Store</option>
+                <option value="New York City, NY">New York City, NY</option>
+                <option value="Los Angeles, CA">Los Angeles, CA</option>
+                <option value="Chicago, IL">Chicago, IL</option>
+                <option value="Houston, TX">Houston, TX</option>
+                <option value="Miami, FL">Miami, FL</option>
+              </select>
+            </div>
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="buffetFave"
+              className="block text-sm font-medium text-white"
+            >
+              What's your fave?
+            </label>
+            <select
+              id="buffetFave"
+              name="buffetFave"
+              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            >
+              <option value="">Select your favorite</option>
+              <option value="Pepperoni Pizza">Pepperoni Pizza</option>
+              <option value="Cheese Pizza">Cheese Pizza</option>
+              <option value="Hawaiian Pizza">Hawaiian Pizza</option>
+              <option value="Veggie Delight Pizza">Veggie Pizza</option>
+              <option value="Meat Lover's Pizza">BBQ Pizza</option>
+            </select>
+          </div>
+
+          <div className="mb-4">
+            <label htmlFor="terms" className="inline-flex items-center">
+              <input
+                type="checkbox"
+                id="terms"
+                name="terms"
+                className="form-checkbox text-blue-500 h-4 w-4"
+                required
+              />
+              <span className="ml-2 text-sm text-gray-700">
+                I agree to the{" "}
+                <a href="#" className="underline">
+                  Privacy Policy
+                </a>{" "}
+                and{" "}
+                <a href="#" className="underline">
+                  Terms of Service
+                </a>
+              </span>
+            </label>
+          </div>
+          <div className="flex items-center justify-center">
+            <button className="bg-black rounded-full w-[50%] border-0 text-white hover:bg-white hover:text-primary">
+              Submit
+            </button>
+          </div>
+        </form>
+        <p className="text-sm text-white mt-4">
+          By submitting this form and signing up for texts, you consent to
+          receive marketing text messages (e.g. promos) from Cicis at the number
+          provided, including messages sent by autodialer. Consent is not a
+          condition of purchase. Msg & data rates may apply. Msg frequency
+          varies. Unsubscribe at any time by replying STOP.
+        </p>
+      </div>
     </section>
   );
 };
