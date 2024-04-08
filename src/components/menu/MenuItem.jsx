@@ -15,7 +15,7 @@ const MenuItem = ({ image, title, description, price }) => {
         <p className="text-gray-500 text-sm">{description}</p>
       </div>
       <div className="">
-        <button className=" bg-primary text-white rounded-full px-8 py-2 mt-4">
+        <button className=" bg-primary text-white rounded-full px-8 py-2 mt-4 hover:brightness-90">
           Add to cart ${price}
         </button>
       </div>

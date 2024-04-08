@@ -70,7 +70,7 @@ const ContactPage = () => {
         </div>
       </div>
       <div className="w-full bg-primary  p-4  rounded-xl flex flex-col items-center justify-center gap-4">
-        <h1 className="text-white text-3xl  font-bold">Call US</h1>
+        <h1 className="text-white text-3xl  font-bold">Call Us</h1>
         <h2 className="text-gray-500 text-2xl">+46 738 123 123</h2>
       </div>
       <div className=" py-8 px-4 bg-secondary text-black rounded-xl">

@@ -4,7 +4,7 @@ import SectionHeaders from "./SectionHeaders";
 
 const Contact = () => {
   return (
-    <section className="text-center mmy-8">
+    <section className="text-center my-8">
       <Link href={"/contact"}>
         <SectionHeaders
           subHeader={"Don't hesitate"}

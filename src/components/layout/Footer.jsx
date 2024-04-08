@@ -15,9 +15,11 @@ const Footer = () => {
             <div className="flex flex-1 gap-2 items-center  justify-center border-r-2">
               <FaPizzaSlice
                 alt="St Pizza logo"
-                class="w-[50px] h-[50px] text-primary "
+                class="sm:w-[50px] w-[30px] sm:h-[50px] h-[30px] text-primary  "
               />
-              <h1 className="text-primary text-4xl font-bold ">St Pizza</h1>
+              <h1 className="text-primary sm:text-4xl text-2xl font-bold ">
+                St Pizza
+              </h1>
             </div>
             <div className="flex-1 flex items-center justify-center text-center font-bold italic">
               <h1 className="font-mono">THE BEST PIZZA VALUE ANYWHERE</h1>

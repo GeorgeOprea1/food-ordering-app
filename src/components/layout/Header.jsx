@@ -3,6 +3,7 @@ import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { SlMenu } from "react-icons/sl";
 import { useState } from "react";
+import { FaPizzaSlice } from "react-icons/fa";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,12 +22,16 @@ const Header = () => {
 
   return (
     <header className="w-full flex items-center justify-between ">
-      <Link
-        href={"/"}
-        className="text-primary font-semibold text-2xl sm:text-4xl"
-        passHref
-      >
-        St Pizza
+      <Link href={"/"}>
+        <div className="flex items-center justify-center gap-2 sm:gap-4">
+          <FaPizzaSlice
+            alt="St Pizza logo"
+            class="sm:w-[50px] w-[30px] sm:h-[50px] h-[30px] text-primary  "
+          />
+          <h1 className="text-primary font-semibold text-2xl sm:text-4xl">
+            St Pizza
+          </h1>
+        </div>
       </Link>
       <SlMenu
         className="sm:hidden cursor-pointer z-30"

@@ -14,7 +14,7 @@ const ReviewItem = () => {
     <div
       className={`snap-start  ${
         expanded ? "h-[350px]" : "h-full"
-      } mr-4 bg-[#f4f3e9] p-8 rounded-3xl`}
+      } mr-4 bg-secondary p-8 rounded-3xl`}
     >
       <h1 className="font-bold text-xl">ROSE</h1>
       <div className="flex items-center">
