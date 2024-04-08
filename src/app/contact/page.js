@@ -29,6 +29,7 @@ const ContactPage = () => {
           ></img>
         </div>
       </div>
+
       <div className="bg-secondary p-6 rounded-xl">
         <div className="flex flex-col gap-4 mt-10">
           <h1 className="text-primary text-3xl text-center font-bold">
@@ -68,7 +69,11 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
-      <div className=" py-8 px-4 bg-primary text-white rounded-xl">
+      <div className="w-full bg-primary  p-4  rounded-xl flex flex-col items-center justify-center gap-4">
+        <h1 className="text-white text-3xl  font-bold">Call US</h1>
+        <h2 className="text-gray-500 text-2xl">+46 738 123 123</h2>
+      </div>
+      <div className=" py-8 px-4 bg-secondary text-black rounded-xl">
         <h2 className="text-3xl font-bold text-center mb-6">
           NEVER MISS OUT ON AMAZING DEALS AT CICIS!
         </h2>
@@ -80,7 +85,7 @@ const ContactPage = () => {
             <div className="w-full md:w-1/2 px-2 mb-4">
               <label
                 htmlFor="firstName"
-                className="block text-sm font-medium text-white"
+                className="block text-sm font-medium text-black"
               >
                 First Name *
               </label>
@@ -95,7 +100,7 @@ const ContactPage = () => {
             <div className="w-full md:w-1/2 px-2 mb-4">
               <label
                 htmlFor="lastName"
-                className="block text-sm font-medium text-white"
+                className="block text-sm font-medium text-black"
               >
                 Last Name *
               </label>
@@ -111,7 +116,7 @@ const ContactPage = () => {
           <div className="mb-4">
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-white"
+              className="block text-sm font-medium text-black"
             >
               Email *
             </label>
@@ -126,7 +131,7 @@ const ContactPage = () => {
           <div className="mb-4">
             <label
               htmlFor="phone"
-              className="block text-sm font-medium text-white"
+              className="block text-sm font-medium text-black"
             >
               Phone Number *
             </label>
@@ -144,7 +149,7 @@ const ContactPage = () => {
             <div className="w-full  px-2">
               <label
                 htmlFor="birthday"
-                className="block text-sm font-medium text-white"
+                className="block text-sm font-medium text-black"
               >
                 Birthday (MM/DD)
               </label>
@@ -159,7 +164,7 @@ const ContactPage = () => {
             <div className="w-full flex flex-col   px-2">
               <label
                 htmlFor="homeStore"
-                className="block text-sm font-medium text-white"
+                className="block text-sm font-medium text-black"
               >
                 Home Store *
               </label>
@@ -181,7 +186,7 @@ const ContactPage = () => {
           <div className="mb-4">
             <label
               htmlFor="buffetFave"
-              className="block text-sm font-medium text-white"
+              className="block text-sm font-medium text-black"
             >
               What's your fave?
             </label>
@@ -226,7 +231,7 @@ const ContactPage = () => {
             </button>
           </div>
         </form>
-        <p className="text-sm text-white mt-4">
+        <p className="text-sm text-gray-500 mt-4">
           By submitting this form and signing up for texts, you consent to
           receive marketing text messages (e.g. promos) from Cicis at the number
           provided, including messages sent by autodialer. Consent is not a

@@ -1,10 +1,16 @@
 import React from "react";
-import SectionHeaders from "./../layout/SectionHeaders";
+import Link from "next/link";
+import SectionHeaders from "./SectionHeaders";
 
 const Contact = () => {
   return (
     <section className="text-center mmy-8">
-      <SectionHeaders subHeader={"Don't hesitate"} mainHeader={"Contact Us"} />
+      <Link href={"/contact"}>
+        <SectionHeaders
+          subHeader={"Don't hesitate"}
+          mainHeader={"Contact Us"}
+        />
+      </Link>
       <div className="mt-8">
         <a
           className=" text-4xl underline text-gray-500"
