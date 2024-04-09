@@ -4,8 +4,11 @@ import Link from "next/link";
 import { SlMenu } from "react-icons/sl";
 import { useState } from "react";
 import { FaPizzaSlice } from "react-icons/fa";
+import { CartContext } from "../AppContext";
+import { useContext } from "react";
 
 const Header = () => {
+  const { cartProducts } = useContext(CartContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const { data: session, status } = useSession();
@@ -23,25 +26,25 @@ const Header = () => {
   return (
     <header className="w-full flex items-center justify-between ">
       <Link href={"/"}>
-        <div className="flex items-center justify-center gap-2 sm:gap-4">
+        <div className="flex items-center justify-center gap-2 md:gap-4">
           <FaPizzaSlice
             alt="St Pizza logo"
-            class="sm:w-[50px] w-[30px] sm:h-[50px] h-[30px] text-primary  "
+            className="md:w-[50px] w-[30px] md:h-[50px] h-[30px] text-primary  "
           />
-          <h1 className="text-primary font-semibold text-2xl sm:text-4xl">
+          <h1 className="text-primary font-semibold text-2xl md:text-4xl">
             St Pizza
           </h1>
         </div>
       </Link>
       <SlMenu
-        className="sm:hidden cursor-pointer z-30"
+        className="md:hidden cursor-pointer z-30"
         onClick={toggleMenu}
         style={{ transform: isMenuOpen ? "rotate(90deg)" : "rotate(0deg)" }}
       />
       {isMenuOpen && (
-        <div className="sm:hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-10">
-          <div className="sm:hidden bg-white w-full h-full flex flex-col gap-6 items-center justify-center  shadow-lg">
-            <nav className="flex flex-col gap-6 text-xl sm:text-lg text-gray-500 font-semibold items-center w-full">
+        <div className="md:hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-10">
+          <div className="md:hidden bg-white w-full h-full flex flex-col gap-6 items-center justify-center  shadow-lg">
+            <nav className="flex flex-col gap-6 text-xl md:text-lg text-gray-500 font-semibold items-center w-full">
               <Link
                 href={"/"}
                 className="hover:text-primary border-2 border-gray-300 p-4 w-[50%] text-center rounded-full"
@@ -69,6 +72,13 @@ const Header = () => {
                 onClick={toggleMenu}
               >
                 Contact
+              </Link>
+              <Link
+                href={"/cart"}
+                className="hover:text-primary border-2 border-gray-300 p-4 w-[50%] text-center rounded-full"
+                onClick={toggleMenu}
+              >
+                Cart <span>({cartProducts.length})</span>
               </Link>
             </nav>
             <nav className="flex flex-col items-center gap-6 text-xl text-gray-500 font-semibold w-full">
@@ -111,8 +121,8 @@ const Header = () => {
           </div>
         </div>
       )}
-      <div className="hidden sm:flex gap-10">
-        <nav className="flex gap-4 text-xs sm:text-lg text-gray-500 font-semibold items-center">
+      <div className="hidden md:flex gap-10">
+        <nav className="flex gap-4 text-xs md:text-lg text-gray-500 font-semibold items-center">
           <Link href={"/"} className="hover:text-primary">
             Home
           </Link>
@@ -134,7 +144,7 @@ const Header = () => {
               </Link>
               <button
                 onClick={() => signOut()}
-                className="bg-primary text-white px-2 sm:px-8 py-1 rounded-full"
+                className="bg-primary text-white px-2 md:px-8 py-1 rounded-full"
               >
                 Logout
               </button>
@@ -147,12 +157,17 @@ const Header = () => {
               </Link>
               <Link
                 href={"/register"}
-                className="bg-primary text-white px-2 sm:px-8 py-1 rounded-full"
+                className="bg-primary text-white px-2 md:px-8 py-1 rounded-full"
               >
                 Register
               </Link>
             </>
           )}
+          <Link href={"/cart"} className="flex">
+            <h1 className="text-xs md:text-lg text-gray-500 font-semibold hover:text-primary cursor-pointer">
+              Cart <span>({cartProducts.length})</span>
+            </h1>
+          </Link>
         </nav>
       </div>
     </header>

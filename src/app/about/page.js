@@ -98,7 +98,7 @@ const AboutPage = () => {
           </button>
         </div>
       </div>
-      <div className="w-full flex flex-col border-2 sm:flex-row gap-4 bg-primary  rounded-2xl mt-8 p-8">
+      <div className="w-full flex flex-col  sm:flex-row gap-4 bg-primary  rounded-2xl mt-8 p-8">
         <div className="sm:w-[50%] ">
           <img
             src={work.src}
