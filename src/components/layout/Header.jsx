@@ -8,8 +8,9 @@ import { CartContext } from "../AppContext";
 import { useContext } from "react";
 
 const Header = () => {
-  const { cartProducts } = useContext(CartContext);
+  const { cartProducts, calculateQuantity } = useContext(CartContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const totalQuantity = calculateQuantity();
 
   const { data: session, status } = useSession();
   const userData = session?.user;
@@ -165,7 +166,7 @@ const Header = () => {
           )}
           <Link href={"/cart"} className="flex">
             <h1 className="text-xs md:text-lg text-gray-500 font-semibold hover:text-primary cursor-pointer">
-              Cart <span>({cartProducts.length})</span>
+              Cart <span>({totalQuantity})</span>
             </h1>
           </Link>
         </nav>

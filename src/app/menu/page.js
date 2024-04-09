@@ -14,6 +14,8 @@ const MenuPage = () => {
             title={pizza.title}
             description={pizza.description}
             price={pizza.price}
+            quantity={pizza.quantity}
+            id={pizza.id}
           />
         ))}
       </div>

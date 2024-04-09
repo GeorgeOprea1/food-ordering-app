@@ -2,10 +2,10 @@
 import React, { useContext } from "react";
 import { CartContext } from "../AppContext";
 
-const MenuItem = ({ image, title, description, price }) => {
+const MenuItem = ({ id, image, title, description, price, quantity }) => {
   const { addToCart } = useContext(CartContext);
 
-  const product = { image, title, price };
+  const product = { id, image, title, price, quantity };
 
   return (
     <div className="flex flex-col items-center gap-1  bg-gray-200 p-4 rounded-lg text-center hover:bg-white transition-all cursor-pointer hover:shadow-md hover:shadow-black/25">

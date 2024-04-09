@@ -44,10 +44,12 @@ const HomeMenu = () => {
         {randomPizzas.map((pizza) => (
           <MenuItem
             key={pizza.id}
+            id={pizza.id}
             image={pizza.image}
             title={pizza.title}
             description={pizza.description}
             price={pizza.price}
+            quantity={pizza.quantity}
           />
         ))}
       </div>

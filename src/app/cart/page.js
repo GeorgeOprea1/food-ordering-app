@@ -5,7 +5,13 @@ import { useContext } from "react";
 import { FaTrashAlt } from "react-icons/fa";
 
 const CartPage = () => {
-  const { cartProducts } = useContext(CartContext);
+  const {
+    cartProducts,
+    removeFromCart,
+    increaseQuantity,
+    decreaseQuantity,
+    calculateTotalPrice,
+  } = useContext(CartContext);
 
   return (
     <div className="container flex-col mx-auto px-4 py-8">
@@ -33,23 +39,41 @@ const CartPage = () => {
                 </div>
               </div>
               <div className="flex gap-4  justify-between  items-center">
-                <h1 className="text-gray-500  text-center ">
-                  ${product.price}
-                </h1>
+                <div className="flex w-full  gap-12 text-lg font-semibold">
+                  <h1 className="text-green-600  text-center ">
+                    ${product.price}
+                  </h1>
+                  <h1 className="text-black text-center ">
+                    ({product.quantity})
+                  </h1>
+                </div>
+
                 <div className="flex gap-2">
-                  <button className="bg-primary text-white px-3 py-1 rounded-md hover:brightness-75">
+                  <button
+                    onClick={() => increaseQuantity(product.id)}
+                    className="bg-primary text-white px-3 py-1 rounded-md hover:brightness-75"
+                  >
                     +
                   </button>
-                  <button className="bg-primary text-white px-3 py-1 rounded-md hover:brightness-75">
+                  <button
+                    onClick={() => decreaseQuantity(product.id)}
+                    className="bg-primary text-white px-3 py-1 rounded-md hover:brightness-75"
+                  >
                     -
                   </button>
-                  <button className="text-black px-3 py-1 rounded-md ">
+                  <button
+                    onClick={() => removeFromCart(product.id)}
+                    className="text-black px-3 py-1 rounded-md "
+                  >
                     <FaTrashAlt className="w-[20px] h-[20px] hover:text-red-500" />
                   </button>
                 </div>
               </div>
             </div>
           ))}
+          <div className="mt-8 text-xl text-center font-semibold">
+            Total Price: ${calculateTotalPrice()}
+          </div>
         </div>
       )}
     </div>
