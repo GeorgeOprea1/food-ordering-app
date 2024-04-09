@@ -1,11 +1,22 @@
 "use client";
 import { SessionProvider } from "next-auth/react";
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
+import toast from "react-hot-toast";
 
 export const CartContext = createContext({});
 
 export default function AppProvider({ children }) {
   const [cartProducts, setCartProducts] = useState([]);
+  const ls = typeof window !== "undefined" ? window.localStorage : null;
+
+  useEffect(() => {
+    if (ls) {
+      const storedCart = ls.getItem("cart");
+      if (storedCart) {
+        setCartProducts(JSON.parse(storedCart));
+      }
+    }
+  }, []);
 
   function addToCart(product) {
     const existingProduct = cartProducts.find((item) => item.id === product.id);
@@ -15,9 +26,13 @@ export default function AppProvider({ children }) {
         item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
       );
       setCartProducts(updatedProducts);
+      saveCartProductsToLocalStorage(updatedProducts);
     } else {
-      setCartProducts([...cartProducts, { ...product, quantity: 1 }]);
+      const updatedCart = [...cartProducts, { ...product, quantity: 1 }];
+      setCartProducts(updatedCart);
+      saveCartProductsToLocalStorage(updatedCart);
     }
+    toast.success("Product added");
   }
 
   function removeFromCart(productId) {
@@ -25,6 +40,8 @@ export default function AppProvider({ children }) {
       (item) => item.id !== productId
     );
     setCartProducts(updatedProducts);
+    saveCartProductsToLocalStorage(updatedProducts);
+    toast.error("Product removed");
   }
 
   function increaseQuantity(productId) {
@@ -32,6 +49,8 @@ export default function AppProvider({ children }) {
       item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
     );
     setCartProducts(updatedProducts);
+    saveCartProductsToLocalStorage(updatedProducts);
+    toast.success("Added one item");
   }
 
   function decreaseQuantity(productId) {
@@ -43,6 +62,8 @@ export default function AppProvider({ children }) {
       )
       .filter((item) => item.quantity > 0);
     setCartProducts(updatedProducts);
+    saveCartProductsToLocalStorage(updatedProducts);
+    toast.error("Removed one item");
   }
 
   const calculateTotalPrice = () => {
@@ -60,6 +81,12 @@ export default function AppProvider({ children }) {
     });
     return totalQuantity;
   };
+
+  function saveCartProductsToLocalStorage(cartProducts) {
+    if (ls) {
+      ls.setItem("cart", JSON.stringify(cartProducts));
+    }
+  }
 
   return (
     <SessionProvider>
