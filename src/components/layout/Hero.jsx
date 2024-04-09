@@ -17,9 +17,12 @@ const Hero = () => {
           delicious joy in life
         </p>
         <div className="flex flex-col items-center sm:items-start sm:flex-row  w-full gap-4 text-sm ">
-          <button className=" justify-center bg-primary uppercase text-white px-8 py-2 rounded-full flex items-center gap-2 hover:brightness-90">
+          <Link
+            href={"/menu"}
+            className="w-full justify-center bg-primary uppercase text-white px-8 py-2 rounded-full flex items-center gap-2 hover:brightness-90 font-semibold"
+          >
             Order Now <Right />
-          </button>{" "}
+          </Link>{" "}
           <Link
             href={"/about"}
             className="w-full flex  items-center justify-center gap-2 py-2 text-gray-600 font-semibold border  border-gray-700 rounded-full px-6 hover:text-primary hover:border-primary  "
