@@ -29,6 +29,7 @@ const AboutPage = () => {
 
   return (
     <section className="mt-8">
+      <h1 className="text-center text-primary text-4xl my-2">About</h1>
       <div className=" flex flex-col gap-4 text-center">
         <h1 className="text-center text-primary text-4xl font-bold my-10">
           St Pizza History

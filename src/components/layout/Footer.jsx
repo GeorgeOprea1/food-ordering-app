@@ -63,27 +63,27 @@ const Footer = () => {
         <div className="w-full  text-center md:text-left  ">
           <ul className="flex flex-col gap-2 md:grid md:grid-cols-3 md:gap-4   md:justify-end space-x-4 ">
             <li>
-              <a href="#" className="hover:text-primary ml-4">
+              <a href="/contact" className="hover:text-primary ml-4">
                 FAQ
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-primary">
+              <a href="/contact" className="hover:text-primary">
                 Contact Us
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-primary">
+              <a href="/about" className="hover:text-primary">
                 Our Story
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-primary">
+              <a href="/menu" className="hover:text-primary">
                 Order Online
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-primary">
+              <a href="/about" className="hover:text-primary">
                 Careers
               </a>
             </li>
@@ -98,7 +98,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-gray-400">
+              <a href="/contact" className="hover:text-gray-400">
                 Franchising
               </a>
             </li>

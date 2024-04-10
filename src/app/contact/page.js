@@ -2,10 +2,12 @@ import React from "react";
 import pizza from "./../../../public/pizza.png";
 import experience from "./../../../public/experience.avif";
 import questions from "./../../../public/question.avif";
+import SectionHeaders from "../../components/layout/SectionHeaders";
 
 const ContactPage = () => {
   return (
     <section className="mt-8 flex flex-col gap-8">
+      <h1 className="text-center text-primary text-4xl my-2">Contact</h1>
       <div className="bg-primary w-full p-4 flex  relative overflow-hidden rounded-xl">
         <div className="flex flex-col flex-1   items-center justify-center gap-4">
           <h1 className="text-white text-3xl font-bold text-center">
@@ -75,7 +77,7 @@ const ContactPage = () => {
       </div>
       <div className=" py-8 px-4 bg-secondary text-black rounded-xl">
         <h2 className="text-3xl font-bold text-center mb-6">
-          NEVER MISS OUT ON AMAZING DEALS AT CICIS!
+          NEVER MISS OUT ON AMAZING DEALS AT ST PIZZA!
         </h2>
         <p className="text-lg text-center mb-6">
           SIGN UP FOR NEW PIZZABILITIES
