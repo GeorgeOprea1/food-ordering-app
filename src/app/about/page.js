@@ -6,6 +6,7 @@ import ReviewItem from "./../../components/review/ReviewItem";
 import { FaChevronLeft } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa6";
 import { useRef } from "react";
+import { customers } from "./../constants/customers";
 
 const AboutPage = () => {
   const carouselRef = useRef(null);
@@ -82,19 +83,20 @@ const AboutPage = () => {
           4.50 (97824 reviews)
         </div>
         <div className=" flex">
-          <button className="border-0 flex items-center justify-center">
+          <button className="border-0 flex items-center justify-center hover:scale-150">
             <FaChevronLeft className="w-[30px] h-[30px]" onClick={scrollLeft} />
           </button>
           <div className="carousel-container my-10 py-8" ref={carouselRef}>
-            <ReviewItem />
-            <ReviewItem />
-            <ReviewItem />
-            <ReviewItem />
-            <ReviewItem />
-            <ReviewItem />
-            <ReviewItem />
+            {customers.map((costumer) => (
+              <ReviewItem
+                key={costumer.id}
+                name={costumer.name}
+                review={costumer.review}
+                date={costumer.date}
+              />
+            ))}
           </div>
-          <button className="border-0 flex  items-center justify-center">
+          <button className="border-0 flex  items-center justify-center hover:scale-150">
             <FaAngleRight className="w-[30px] h-[30px]" onClick={scrollRight} />
           </button>
         </div>

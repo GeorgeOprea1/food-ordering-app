@@ -21,9 +21,10 @@ const HomeMenu = () => {
         <div className="">
           <Image
             src={"/sallad1.png"}
-            width={100}
-            height={100}
-            alt={"sallad"}
+            width={200}
+            height={200}
+            alt={"sallad image"}
+            style={{ width: "auto", height: "auto" }}
           ></Image>
         </div>
 
@@ -34,9 +35,10 @@ const HomeMenu = () => {
         <div className="">
           <Image
             src={"/sallad2.png"}
-            width={100}
-            height={100}
-            alt={"sallad"}
+            width={200}
+            height={200}
+            alt={"sallad image"}
+            style={{ width: "auto", height: "auto" }}
           ></Image>
         </div>
       </div>

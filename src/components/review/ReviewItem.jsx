@@ -3,11 +3,10 @@ import React from "react";
 import { MdOutlineStar } from "react-icons/md";
 import { useState } from "react";
 
-const ReviewItem = () => {
+const ReviewItem = ({ name, review, date }) => {
   const [expanded, setExpanded] = useState(true);
   const toggleExpanded = () => {
     setExpanded(!expanded);
-    console.log(expanded);
   };
 
   return (
@@ -16,7 +15,7 @@ const ReviewItem = () => {
         expanded ? "h-[350px]" : "h-full"
       } mr-4 bg-secondary p-8 rounded-3xl`}
     >
-      <h1 className="font-bold text-xl">ROSE</h1>
+      <h1 className="font-bold text-xl">{name}</h1>
       <div className="flex items-center">
         <MdOutlineStar className="w-[25px] h-[25px]" />
         <MdOutlineStar className="w-[25px] h-[25px]" />
@@ -24,17 +23,14 @@ const ReviewItem = () => {
         <MdOutlineStar className="w-[25px] h-[25px]" />
         <MdOutlineStar className="w-[25px] h-[25px]" />
       </div>
-      <h2 className="text-lg font-semibold">a year ago</h2>
+      <h2 className="text-lg font-semibold">{date}</h2>
       <div className="flex flex-col ">
         <p
           className={` w-full my-2 ${
             !expanded ? "h-full " : " h-[160px] overflow-hidden  "
           }`}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quidem
-          explicabo autem doloremque voluptates eum, eos, officiis maxime ullam
-          deserunt, aut blanditiis? Placeat saepe nam quae. Tempore ducimus
-          nihil impedit!
+          {review}
         </p>{" "}
         {expanded ? (
           <button

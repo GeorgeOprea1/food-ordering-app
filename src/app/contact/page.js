@@ -1,5 +1,5 @@
 import React from "react";
-import pizza from "./../../../public/pizza.png";
+import pizza from "./../../../public/pizza.avif";
 import experience from "./../../../public/experience.avif";
 import questions from "./../../../public/question.avif";
 import SectionHeaders from "../../components/layout/SectionHeaders";

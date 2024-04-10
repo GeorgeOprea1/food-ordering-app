@@ -34,10 +34,11 @@ const Hero = () => {
       </div>
       <div className="sm:w-[50%] w-full  flex items-center  justify-center">
         <Image
-          src={"/pizza.png"}
+          src={"/pizza.avif"}
           alt={"pizza"}
           width={300}
           height={300}
+          priority={true}
         ></Image>
       </div>
     </section>
