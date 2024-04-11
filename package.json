@@ -26,6 +26,8 @@
     "react-toastify": "^10.0.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
     "@types/node": "20.11.30",
     "@types/react": "18.2.72",
     "autoprefixer": "^10.0.1",
