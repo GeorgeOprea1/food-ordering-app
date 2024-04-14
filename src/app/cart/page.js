@@ -14,7 +14,7 @@ const CartPage = () => {
   } = useContext(CartContext);
 
   return (
-    <div className="container flex-col mx-auto px-4 py-8">
+    <div className="container flex-col  mx-auto px-4 py-8">
       <h1 className="text-2xl font-semibold mb-4 text-center">Your Cart</h1>
       {cartProducts.length === 0 ? (
         <p className="text-gray-600 text-lg font-semibold text-center">
@@ -73,6 +73,11 @@ const CartPage = () => {
           ))}
           <div className="mt-8 text-xl text-center font-semibold">
             Total Price: ${calculateTotalPrice()}
+          </div>
+          <div className="flex  items-center justify-center">
+            <button className="w-[80%] sm:[50%] bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-indigo-600 hover:to-purple-500 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 cursor-pointer">
+              Checkout
+            </button>
           </div>
         </div>
       )}
