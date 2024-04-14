@@ -46,7 +46,7 @@ const LoginPage = () => {
         <button
           type="button"
           onClick={() => signIn("google", { callbackUrl: "/" })}
-          className="flex items-center gap-4 justify-center"
+          className="flex items-center gap-4 justify-center hover:border-2  border-blue-400"
         >
           <Image
             src={"/google.svg"}
