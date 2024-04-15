@@ -88,6 +88,12 @@ export default function AppProvider({ children }) {
     }
   }
 
+  const clearCart = () => {
+    setCartProducts([]);
+    saveCartProductsToLocalStorage([]);
+    toast.error("Cart cleared");
+  };
+
   return (
     <SessionProvider>
       <CartContext.Provider
@@ -99,6 +105,7 @@ export default function AppProvider({ children }) {
           decreaseQuantity,
           calculateTotalPrice,
           calculateQuantity,
+          clearCart,
         }}
       >
         {children}

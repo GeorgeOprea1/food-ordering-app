@@ -11,11 +11,13 @@ const MenuPage = () => {
           <MenuItem
             key={pizza.id}
             image={pizza.image}
-            title={pizza.title}
+            name={pizza.name}
             description={pizza.description}
             price={pizza.price}
             quantity={pizza.quantity}
             id={pizza.id}
+            price_id={pizza.price_id}
+            link={pizza.link}
           />
         ))}
       </div>
