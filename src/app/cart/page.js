@@ -3,10 +3,7 @@ import React from "react";
 import { CartContext } from "../../components/AppContext";
 import { useContext } from "react";
 import { FaTrashAlt } from "react-icons/fa";
-import { loadStripe } from "@stripe/stripe-js";
-import toast from "react-hot-toast";
-
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
+import axios from "axios";
 
 const CartPage = () => {
   const {
@@ -18,26 +15,20 @@ const CartPage = () => {
     clearCart,
   } = useContext(CartContext);
 
-  const CheckoutClicked = async () => {
-    const stripe = await stripePromise;
-    const { error } = await stripe.redirectToCheckout({
-      lineItems: cartProducts.map((product) => ({
-        price: product.price_id,
-        quantity: product.quantity,
-      })),
-      mode: "payment",
-      successUrl: "http://localhost:3000",
-      cancelUrl: "http://localhost:3000",
-    });
-
-    if (error) {
-      console.error("Error during checkout:", error);
-    } else {
-      window.addEventListener("popstate", () => {
-        console.log("popstate event triggered");
-        clearCart();
-      });
-    }
+  const handleCheckout = async (e) => {
+    e.preventDefault();
+    const { data } = await axios.post(
+      "/api/checkout",
+      {
+        cartProducts,
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    window.location.assign(data);
   };
 
   return (
@@ -89,6 +80,8 @@ const CartPage = () => {
                     -
                   </button>
                   <button
+                    type="submit"
+                    role="link"
                     onClick={() => removeFromCart(product.id)}
                     className="text-black px-3 py-1 rounded-md "
                   >
@@ -101,14 +94,22 @@ const CartPage = () => {
           <div className="mt-8 text-xl text-center font-semibold">
             Total Price: ${calculateTotalPrice()}
           </div>
-          <div className="flex  items-center justify-center">
+          <div className="flex flex-col gap-4 items-center justify-center">
             <button
-              onClick={CheckoutClicked}
+              onClick={handleCheckout}
               className="w-[80%] sm:[50%] bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-indigo-600 hover:to-purple-500 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 cursor-pointer"
             >
               Checkout
             </button>
+            <button
+              onClick={clearCart}
+              className="w-[80%] sm:[50%]  inline-block bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 cursor-pointer"
+            >
+              Clear cart
+            </button>
           </div>
+
+          <div className="flex  items-center justify-center"></div>
         </div>
       )}
     </div>
