@@ -28,10 +28,7 @@ const Header = () => {
     <header className="w-full flex items-center justify-between ">
       <Link href={"/"}>
         <div className="flex items-center justify-center gap-2 md:gap-4">
-          <FaPizzaSlice
-            alt="St Pizza logo"
-            className="md:w-[50px] w-[30px] md:h-[50px] h-[30px] text-primary  "
-          />
+          <FaPizzaSlice className="md:w-[50px] w-[30px] md:h-[50px] h-[30px] text-primary  " />
           <h1 className="text-primary font-semibold text-2xl md:text-4xl">
             St Pizza
           </h1>

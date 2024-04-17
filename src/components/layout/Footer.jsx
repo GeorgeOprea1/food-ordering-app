@@ -13,10 +13,7 @@ const Footer = () => {
         <div className="w-full md:w-1/4 mb-4 md:mb-0 flex flex-col gap-6 items-center justify-center md:justify-start">
           <div className=" flex md:gap-4">
             <div className="flex flex-1 gap-2 items-center  justify-center border-r-2">
-              <FaPizzaSlice
-                alt="St Pizza logo"
-                className="sm:w-[50px] w-[30px] sm:h-[50px] h-[30px] text-primary  "
-              />
+              <FaPizzaSlice className="sm:w-[50px] w-[30px] sm:h-[50px] h-[30px] text-primary  " />
               <h1 className="text-primary sm:text-4xl text-2xl font-bold ">
                 St Pizza
               </h1>
@@ -27,36 +24,20 @@ const Footer = () => {
           </div>
 
           <div className="flex  w-full items-center justify-center  space-x-4 p-2">
-            <a href="#">
-              <FaFacebookSquare
-                aria-label="Check out our facebook page"
-                alt="Facebook Logo"
-                className=" w-[25px] h-[25px] cursor-pointer hover:text-primary"
-              />
+            <a href="#" aria-label="Check out our facebook page">
+              <FaFacebookSquare className=" w-[25px] h-[25px] cursor-pointer hover:text-primary" />
             </a>
             <a href="#" aria-label="Check out our youtube channel">
-              <FaYoutube
-                alt="YouTube Logo"
-                className="  w-[25px] h-[25px] cursor-pointer hover:text-primary"
-              />
+              <FaYoutube className="  w-[25px] h-[25px] cursor-pointer hover:text-primary" />
             </a>
             <a href="#" aria-label="Follow us on Twitter">
-              <FaXTwitter
-                alt="Twitter Logo"
-                className="w-[25px] h-[25px] cursor-pointer hover:text-primary"
-              />
+              <FaXTwitter className="w-[25px] h-[25px] cursor-pointer hover:text-primary" />
             </a>
             <a href="#" aria-label="Follow us on Instagram">
-              <FaInstagramSquare
-                alt="Instagram Logo"
-                className=" w-[25px] h-[25px] cursor-pointer hover:text-primary"
-              />
+              <FaInstagramSquare className=" w-[25px] h-[25px] cursor-pointer hover:text-primary" />
             </a>
             <a href="#" aria-label="Follow us on Tiktok">
-              <FaTiktok
-                alt="TikTok Logo"
-                className=" w-[25px] h-[25px] hover:text-primary"
-              />
+              <FaTiktok className=" w-[25px] h-[25px] hover:text-primary" />
             </a>
           </div>
         </div>

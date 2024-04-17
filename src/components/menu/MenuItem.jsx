@@ -94,7 +94,7 @@ const MenuItem = ({
           />
         </div>
         <div className="h-[60%] overflow-scroll">
-          <h4 className="font-semibold  text-xl my-3">{name}</h4>
+          <h2 className="font-semibold  text-xl my-3">{name}</h2>
           <p className="text-gray-500 text-sm">{description}</p>
         </div>
         <div className=" flex flex-col gap-3">

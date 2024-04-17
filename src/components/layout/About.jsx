@@ -66,7 +66,7 @@ const About = () => {
         </div>
         <div className=" flex">
           <button
-            id=" arrow-left"
+            id="arrow-left"
             aria-label="Arrow left"
             className="border-0 flex items-center justify-center hover:scale-150"
           >
@@ -84,7 +84,7 @@ const About = () => {
           </div>
           <button className="border-0 flex  items-center justify-center hover:scale-150 ">
             <FaAngleRight
-              id=" arrow-right"
+              id="arrow-right"
               aria-label="Arrow right"
               className="w-[30px] h-[30px]"
               onClick={scrollRight}
