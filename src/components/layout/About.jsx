@@ -65,7 +65,11 @@ const About = () => {
           4.50 (97824 reviews)
         </div>
         <div className=" flex">
-          <button className="border-0 flex items-center justify-center hover:scale-150">
+          <button
+            id=" arrow-left"
+            aria-label="Arrow left"
+            className="border-0 flex items-center justify-center hover:scale-150"
+          >
             <FaChevronLeft className="w-[30px] h-[30px]" onClick={scrollLeft} />
           </button>
           <div className="carousel-container my-10 py-8" ref={carouselRef}>
@@ -79,7 +83,12 @@ const About = () => {
             ))}
           </div>
           <button className="border-0 flex  items-center justify-center hover:scale-150 ">
-            <FaAngleRight className="w-[30px] h-[30px]" onClick={scrollRight} />
+            <FaAngleRight
+              id=" arrow-right"
+              aria-label="Arrow right"
+              className="w-[30px] h-[30px]"
+              onClick={scrollRight}
+            />
           </button>
         </div>
       </div>

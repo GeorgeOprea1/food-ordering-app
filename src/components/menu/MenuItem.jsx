@@ -56,13 +56,15 @@ const MenuItem = ({
               />
             </div>
             <div className="h-[60%] overflow-scroll flex items-center justify-center flex-col">
-              <h4 className="font-semibold text-center text-xl my-3">{name}</h4>
+              <h1 className="font-semibold text-center text-xl my-3">{name}</h1>
               <p className="text-gray-500 text-sm w-[90%] sm:w-[70%] text-center">
                 {description}
               </p>
             </div>
             <div className=" flex flex-col items-center gap-3">
               <button
+                id="add-to-cart"
+                aria-label="Add to cart"
                 onClick={() => addToCart(product)}
                 className="sm:w-[50%] w-[70%] bg-primary text-white text-sm  sm:text-md rounded-full px-8 py-2 mt-4 hover:brightness-90"
               >
@@ -71,6 +73,7 @@ const MenuItem = ({
               <a
                 onClick={handleBuyNowClicked}
                 href={link}
+                aria-label="Buy now"
                 className="sm:w-[50%] w-[70%] text-center text-sm  sm:text-md  bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300"
               >
                 Buy Now

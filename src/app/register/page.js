@@ -63,13 +63,20 @@ const RegisterPage = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit" disabled={creatingUser}>
+        <button
+          id="register"
+          aria-label="Register btn"
+          type="submit"
+          disabled={creatingUser}
+        >
           Register
         </button>
         <div className="my-4 text-center text-gray-500">
           or log in with provider
         </div>
         <button
+          id="login-google"
+          aria-label="Login with Google"
           onClick={() => signIn("google", { callbackUrl: "/" })}
           className="flex items-center gap-4 justify-center hover:border-2  border-blue-400"
         >

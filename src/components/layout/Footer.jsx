@@ -29,29 +29,30 @@ const Footer = () => {
           <div className="flex  w-full items-center justify-center  space-x-4 p-2">
             <a href="#">
               <FaFacebookSquare
+                aria-label="Check out our facebook page"
                 alt="Facebook Logo"
                 className=" w-[25px] h-[25px] cursor-pointer hover:text-primary"
               />
             </a>
-            <a href="#">
+            <a href="#" aria-label="Check out our youtube channel">
               <FaYoutube
                 alt="YouTube Logo"
                 className="  w-[25px] h-[25px] cursor-pointer hover:text-primary"
               />
             </a>
-            <a href="#">
+            <a href="#" aria-label="Follow us on Twitter">
               <FaXTwitter
                 alt="Twitter Logo"
                 className="w-[25px] h-[25px] cursor-pointer hover:text-primary"
               />
             </a>
-            <a href="#">
+            <a href="#" aria-label="Follow us on Instagram">
               <FaInstagramSquare
                 alt="Instagram Logo"
                 className=" w-[25px] h-[25px] cursor-pointer hover:text-primary"
               />
             </a>
-            <a href="#">
+            <a href="#" aria-label="Follow us on Tiktok">
               <FaTiktok
                 alt="TikTok Logo"
                 className=" w-[25px] h-[25px] hover:text-primary"
@@ -63,52 +64,92 @@ const Footer = () => {
         <div className="w-full  text-center md:text-left  ">
           <ul className="flex flex-col gap-2 md:grid md:grid-cols-3 md:gap-4   md:justify-end space-x-4 ">
             <li>
-              <a href="/contact" className="hover:text-primary ml-4">
+              <a
+                href="/contact"
+                aria-label="Check the most frequently asked questions"
+                className="hover:text-primary ml-4"
+              >
                 FAQ
               </a>
             </li>
             <li>
-              <a href="/contact" className="hover:text-primary">
+              <a
+                href="/contact"
+                aria-label="Get in touch with us"
+                className="hover:text-primary"
+              >
                 Contact Us
               </a>
             </li>
             <li>
-              <a href="/about" className="hover:text-primary">
+              <a
+                href="/about"
+                aria-label="Read more about Our Story"
+                className="hover:text-primary"
+              >
                 Our Story
               </a>
             </li>
             <li>
-              <a href="/menu" className="hover:text-primary">
+              <a
+                href="/menu"
+                aria-label="Read more about Order Online"
+                className="hover:text-primary"
+              >
                 Order Online
               </a>
             </li>
             <li>
-              <a href="/about" className="hover:text-primary">
+              <a
+                href="/about"
+                aria-label="Read more about Careers"
+                className="hover:text-primary"
+              >
                 Careers
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-primary">
+              <a
+                href="#"
+                aria-label="Read more about Privacy Policy"
+                className="hover:text-primary"
+              >
                 Privacy Policy
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-primary">
+              <a
+                href="#"
+                aria-label="Read more about Terms & Conditions"
+                className="hover:text-primary"
+              >
                 Terms & Conditions
               </a>
             </li>
             <li>
-              <a href="/contact" className="hover:text-gray-400">
+              <a
+                href="/contact"
+                aria-label="Read more about Franchising"
+                className="hover:text-gray-400"
+              >
                 Franchising
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-gray-400">
+              <a
+                href="#"
+                aria-label="Read more about Nutrition"
+                className="hover:text-gray-400"
+              >
                 Nutrition
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-primary">
+              <a
+                href="#"
+                aria-label="Read more about Ingredients Statements"
+                className="hover:text-primary"
+              >
                 Ingredients Statements
               </a>
             </li>

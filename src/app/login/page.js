@@ -37,13 +37,20 @@ const LoginPage = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button disabled={loginInProgress} type="submit">
+        <button
+          id="login"
+          aria-label="Login btn"
+          disabled={loginInProgress}
+          type="submit"
+        >
           Login
         </button>
         <div className="my-4 text-center text-gray-500">
           or log in with provider
         </div>
         <button
+          id="login-google"
+          aria-label="Login with Google"
           type="button"
           onClick={() => signIn("google", { callbackUrl: "/" })}
           className="flex items-center gap-4 justify-center hover:border-2  border-blue-400"

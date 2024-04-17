@@ -52,8 +52,12 @@ const ContactPage = () => {
               Need more info about our menu and restaurants? Find answers to
               frequently asked questions or get in contact with our team.
             </p>
-            <button className="w-[60%] bg-primary text-white border-white hover:underline cursor-pointer">
-              ASK US Here
+            <button
+              id="ask"
+              aria-label="ASK US HERE"
+              className="w-[60%] bg-primary text-white border-white hover:underline cursor-pointer"
+            >
+              ASK US HERE
             </button>
           </div>
           <div className="bg-white flex-1 border-0 rounded-3xl p-4 flex items-center flex-col justify-between gap-4">
@@ -65,7 +69,11 @@ const ContactPage = () => {
               Your feedback unlocks better pizza possibilities. Share your
               experience at St Pizza.
             </p>
-            <button className="w-[60%] bg-primary text-white border-white hover:underline cursor-pointer">
+            <button
+              id="give"
+              aria-label="GIVE US FEEDBACK"
+              className="w-[60%] bg-primary text-white border-white hover:underline cursor-pointer"
+            >
               GIVE US FEEDBACK
             </button>
           </div>
@@ -228,7 +236,11 @@ const ContactPage = () => {
             </label>
           </div>
           <div className="flex items-center justify-center">
-            <button className="bg-black rounded-full w-[50%] border-0 text-white hover:bg-white hover:text-primary">
+            <button
+              id="submit"
+              aria-label="Submit btn"
+              className="bg-black rounded-full w-[50%] border-0 text-white hover:bg-white hover:text-primary"
+            >
               Submit
             </button>
           </div>

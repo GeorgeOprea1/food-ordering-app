@@ -68,18 +68,24 @@ const CartPage = () => {
 
                 <div className="flex gap-2">
                   <button
+                    id="plus"
+                    aria-label="Plus btn"
                     onClick={() => increaseQuantity(product.id)}
                     className="bg-primary text-white px-3 py-1 rounded-md hover:brightness-75"
                   >
                     +
                   </button>
                   <button
+                    id="minus"
+                    aria-label="Minus btn"
                     onClick={() => decreaseQuantity(product.id)}
                     className="bg-primary text-white px-3 py-1 rounded-md hover:brightness-75"
                   >
                     -
                   </button>
                   <button
+                    id="delete"
+                    aria-label="Delete btn"
                     type="submit"
                     role="link"
                     onClick={() => removeFromCart(product.id)}
@@ -96,12 +102,16 @@ const CartPage = () => {
           </div>
           <div className="flex flex-col gap-4 items-center justify-center">
             <button
+              id="checkout"
+              aria-label="Checkout btn"
               onClick={handleCheckout}
               className="w-[80%] sm:[50%] bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-indigo-600 hover:to-purple-500 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 cursor-pointer"
             >
               Checkout
             </button>
             <button
+              id="clear-cart"
+              aria-label="Clear cart btn"
               onClick={clearCart}
               className="w-[80%] sm:[50%]  inline-block bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 cursor-pointer"
             >

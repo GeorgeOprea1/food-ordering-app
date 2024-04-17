@@ -83,7 +83,11 @@ const AboutPage = () => {
           4.50 (97824 reviews)
         </div>
         <div className=" flex">
-          <button className="border-0 flex items-center justify-center hover:scale-150">
+          <button
+            id=" arrow-left"
+            aria-label="Arrow left"
+            className="border-0 flex items-center justify-center hover:scale-150"
+          >
             <FaChevronLeft className="w-[30px] h-[30px]" onClick={scrollLeft} />
           </button>
           <div className="carousel-container my-10 py-8" ref={carouselRef}>
@@ -96,7 +100,11 @@ const AboutPage = () => {
               />
             ))}
           </div>
-          <button className="border-0 flex  items-center justify-center hover:scale-150">
+          <button
+            id=" arrow-right"
+            aria-label="Arrow right"
+            className="border-0 flex  items-center justify-center hover:scale-150"
+          >
             <FaAngleRight className="w-[30px] h-[30px]" onClick={scrollRight} />
           </button>
         </div>
@@ -119,7 +127,11 @@ const AboutPage = () => {
             buffet. Get to know the benefits of joining our friendly team and
             apply today.
           </p>
-          <button className="bg-white text-primary border-0 rounded-full sm:w-[80%] hoover:underline">
+          <button
+            id="explore"
+            aria-label="EXPLORE ST PIZZA CAREERS"
+            className="bg-white text-primary border-0 rounded-full sm:w-[80%] hoover:underline"
+          >
             EXPLORE ST PIZZA CAREERS
           </button>
         </div>

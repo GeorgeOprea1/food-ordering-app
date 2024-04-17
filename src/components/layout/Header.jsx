@@ -93,6 +93,8 @@ const Header = () => {
                     Hello, {userName}
                   </Link>
                   <button
+                    id="logout"
+                    aria-label="Logout btn"
                     onClick={() => signOut()}
                     className="bg-primary text-white  p-4 w-[50%] rounded-full border-0"
                   >
@@ -144,6 +146,8 @@ const Header = () => {
                 Hello, {userName}
               </Link>
               <button
+                id="logout"
+                aria-label="Logout btn"
                 onClick={() => signOut()}
                 className="bg-primary text-white px-2 md:px-8 py-1 rounded-full"
               >
