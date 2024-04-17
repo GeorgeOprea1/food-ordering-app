@@ -28,7 +28,7 @@ const CartPage = () => {
         },
       }
     );
-    window.location.assign(data);
+    window.location.assign(data.sessionURL);
   };
 
   return (

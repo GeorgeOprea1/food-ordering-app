@@ -91,7 +91,6 @@ export default function AppProvider({ children }) {
   const clearCart = () => {
     setCartProducts([]);
     saveCartProductsToLocalStorage([]);
-    toast.error("Cart cleared");
   };
 
   return (

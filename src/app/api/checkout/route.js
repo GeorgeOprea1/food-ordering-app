@@ -12,9 +12,12 @@ export async function POST(request) {
   const session = await stripe.checkout.sessions.create({
     line_items: lineItems,
     mode: "payment",
-    success_url: "http://localhost:3000",
+    success_url: "http://localhost:3000/success",
     cancel_url: "http://localhost:3000/cart",
   });
 
-  return NextResponse.json(session.url);
+  return NextResponse.json({
+    message: "Checkout successful",
+    sessionURL: session.url,
+  });
 }
