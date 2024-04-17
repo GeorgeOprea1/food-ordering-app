@@ -12,8 +12,8 @@ export async function POST(request) {
   const session = await stripe.checkout.sessions.create({
     line_items: lineItems,
     mode: "payment",
-    success_url: "http://localhost:3000/success",
-    cancel_url: "http://localhost:3000/cart",
+    success_url: "https://st-pizza-two.vercel.app//success",
+    cancel_url: "https://st-pizza-two.vercel.app//cart",
   });
 
   return NextResponse.json({
