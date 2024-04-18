@@ -6,6 +6,7 @@ import { useState } from "react";
 import { FaPizzaSlice } from "react-icons/fa";
 import { CartContext } from "../AppContext";
 import { useContext } from "react";
+import { RiShoppingCart2Line } from "react-icons/ri";
 
 const Header = () => {
   const { cartProducts, calculateQuantity } = useContext(CartContext);
@@ -165,10 +166,11 @@ const Header = () => {
               </Link>
             </>
           )}
-          <Link href={"/cart"} className="flex">
-            <h1 className="text-xs md:text-lg text-gray-500 font-semibold hover:text-primary cursor-pointer">
-              Cart <span>({totalQuantity})</span>
-            </h1>
+          <Link href={"/cart"} className="flex relative">
+            <RiShoppingCart2Line className="w-[25px] h-[25px]" />{" "}
+            <span className="absolute -top-2 -right-4 bg-primary text-white text-xs py-1 px-1 rounded-full leading-3">
+              ({totalQuantity})
+            </span>
           </Link>
         </nav>
       </div>
